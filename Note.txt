@@ -1,0 +1,4 @@
+Nama Database = "kriptografi"
+Akun Admin
+username = admin
+password = 12345
