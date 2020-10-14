@@ -39,8 +39,7 @@
     <!-- Sidebar Menu -->
     <nav class="mt-2">
       <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-        <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
+        <!-- Add icons to the links using the .nav-icon class with font-awesome or any other icon font library -->
         <li class="nav-item has-treeview menu-open">
           <a href="index.php" class="nav-link active">
             <i class="nav-icon fas fa-tachometer-alt"></i>
@@ -111,7 +110,7 @@
               <div class="card-body">
                 <center class="mt-5 mb-5">
                   <h1>Selamat Datang di Aplikasi Kriptografi</h1>
-                  <h3>By. Kelompok 1</h3>
+                  <h3>By.Kelompok 1</h3>
                 </center>
               </div>
               <!-- /.card-body -->
