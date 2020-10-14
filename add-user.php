@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,67 +19,66 @@
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
-<body class="hold-transition sidebar-mini">
-<div class="wrapper">
 
-<?php
+<body class="hold-transition sidebar-mini">
+  <div class="wrapper">
+
+    <?php
     include 'header.php';
     $db = new database();
-    if(isset($_POST['register']))
-    {
-        $nama = $_POST['name'];
-        $username = $_POST['uname'];
-        $password = password_hash($_POST['password'],PASSWORD_DEFAULT);
-        if($db->register($nama,$username,$password))
-        {
-            header('location:users.php');
-        }
+    if (isset($_POST['register'])) {
+      $nama = $_POST['name'];
+      $username = $_POST['uname'];
+      $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+      if ($db->register($nama, $username, $password)) {
+        header('location:users.php');
+      }
     }
-?>
+    ?>
 
-      <!-- Sidebar Menu -->
-      <nav class="mt-2">
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
-               <li class="nav-item has-treeview menu-open">
-            <a href="index.php" class="nav-link">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
-              <p>
-                Dashboard
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="users.php" class="nav-link active">
-              <i class="nav-icon far fa-calendar-alt"></i>
-              <p>
-                Users
-              </p>
-            </a>
-          </li>
-          <li class="nav-header">Enkripsi dan Dekripsi</li>
-          <li class="nav-item">
-            <a href="caesar.php" class="nav-link">
-              <i class="nav-icon fa fa-key"></i>
-              <p>
-                Caesar Cipher
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="steganografi.php" class="nav-link">
-              <i class="nav-icon fa fa-key"></i>
-              <p>
-                Steganografi
-              </p>
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <!-- /.sidebar-menu -->
-    </div>
-    <!-- /.sidebar -->
+    <!-- Sidebar Menu -->
+    <nav class="mt-2">
+      <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+        <!-- Add icons to the links using the .nav-icon class
+            with font-awesome or any other icon font library -->
+        <li class="nav-item has-treeview menu-open">
+          <a href="index.php" class="nav-link">
+            <i class="nav-icon fas fa-tachometer-alt"></i>
+            <p>
+              Dashboard
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="users.php" class="nav-link active">
+            <i class="nav-icon far fa-calendar-alt"></i>
+            <p>
+              Users
+            </p>
+          </a>
+        </li>
+        <li class="nav-header">Enkripsi dan Dekripsi</li>
+        <li class="nav-item">
+          <a href="caesar.php" class="nav-link">
+            <i class="nav-icon fa fa-key"></i>
+            <p>
+              Caesar Cipher
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="steganografi.php" class="nav-link">
+            <i class="nav-icon fa fa-key"></i>
+            <p>
+              Steganografi
+            </p>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- /.sidebar-menu -->
+  </div>
+  <!-- /.sidebar -->
   </aside>
 
   <!-- Content Wrapper. Contains page content -->
@@ -135,7 +135,7 @@
         </div>
       </div>
     </section>
-        
+
   </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
@@ -151,33 +151,34 @@
     <!-- Control sidebar content goes here -->
   </aside>
   <!-- /.control-sidebar -->
-</div>
-<!-- ./wrapper -->
+  </div>
+  <!-- ./wrapper -->
 
-<!-- jQuery -->
-<script src="plugins/jquery/jquery.min.js"></script>
-<!-- Bootstrap 4 -->
-<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- DataTables -->
-<script src="plugins/datatables/jquery.dataTables.js"></script>
-<script src="plugins/datatables-bs4/js/dataTables.bootstrap4.js"></script>
-<!-- AdminLTE App -->
-<script src="dist/js/adminlte.min.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="dist/js/demo.js"></script>
-<!-- page script -->
-<script>
-  $(function () {
-    $("#example1").DataTable();
-    $('#example2').DataTable({
-      "paging": true,
-      "lengthChange": false,
-      "searching": false,
-      "ordering": true,
-      "info": true,
-      "autoWidth": false,
+  <!-- jQuery -->
+  <script src="plugins/jquery/jquery.min.js"></script>
+  <!-- Bootstrap 4 -->
+  <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- DataTables -->
+  <script src="plugins/datatables/jquery.dataTables.js"></script>
+  <script src="plugins/datatables-bs4/js/dataTables.bootstrap4.js"></script>
+  <!-- AdminLTE App -->
+  <script src="dist/js/adminlte.min.js"></script>
+  <!-- AdminLTE for demo purposes -->
+  <script src="dist/js/demo.js"></script>
+  <!-- page script -->
+  <script>
+    $(function() {
+      $("#example1").DataTable();
+      $('#example2').DataTable({
+        "paging": true,
+        "lengthChange": false,
+        "searching": false,
+        "ordering": true,
+        "info": true,
+        "autoWidth": false,
+      });
     });
-  });
-</script>
+  </script>
 </body>
+
 </html>
